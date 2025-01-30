@@ -1,0 +1,72 @@
+.outline-svg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .rect-svg {
+    stroke-dashoffset: 5;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s;
+    stroke: #fff;
+  }
+  
+  .navigation-bar {
+    position: relative;
+    width: 400px;
+    height: 60px;
+  }
+  
+  .nav-container:hover .outline-svg .rect-svg {
+    transition: 999999s;
+    stroke-dashoffset: 1;
+    stroke-dasharray: 0;
+  }
+  
+  .nav-container {
+    position: absolute;
+    inset: 0;
+    background: #bef6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+  }
+  
+  .nav-button {
+    padding: 0.5em 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  
+  .nav-button:hover {
+    background: #fff3;
+  }
+  
+  .nav-button:nth-child(1):hover ~ svg .rect-svg {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 2 8 73.3 8 10.7;
+  }
+  
+  .nav-button:nth-child(2):hover ~ svg .rect-svg {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+  }
+  
+  .nav-button:nth-child(3):hover ~ svg .rect-svg {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+  }
+  
+  .nav-button:nth-child(4):hover ~ svg .rect-svg {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+  }
+  
+  .nav-button:hover ~ .outline-svg .rect-svg {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s !important;
+  }
