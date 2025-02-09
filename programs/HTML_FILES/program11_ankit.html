@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spotify Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(19, 18, 19, 255);
+      padding: 10px;
+    }
+
+    .header img {
+      width: 150px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin: 5px;
+    }
+
+    .nav {
+      margin-top: 15px;
+    }
+
+    .nav a {
+      margin-right: 70px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: #1a944d;
+    }
+
+    .login-container {
+      width: 300px;
+      margin: 40px auto 188px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .login-container img {
+      width: 80%;
+      height: auto;
+      margin: 15px 20px;
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #1db954;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #1a944d;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #1db954;
+    }
+
+    .footer {
+      background-color: rgb(19, 18, 19, 255);
+      padding: 15px;
+      text-align: center;
+      color: rgb(226, 216, 216);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVzZkbZw4LudvL4dInC9q7AkdlfMXYcBZaIQ&s" alt="Spotify logo">
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Info</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGTy5LkIl1r1xdpGmiPi1_FPCBRhyp6vo5A&s" alt="Spotify Logo">
+    <h1>Log in to Spotify</h1>
+    <form>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log in</button>
+    </form>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+  </div>
+
+  <footer class="footer">
+    <h4>©Copyright 2024</h4>
+  </footer>
+
+</body>
+
+</html>

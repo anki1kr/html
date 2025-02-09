@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bio-Data Form</title>
+<style>
+ /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Centering Form */
+form {
+  background-color: #ffffff;
+  width: 60%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Form Title */
+form h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Labels and Inputs */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+form textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+  background-color: #39c922;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Form Container */
+center {
+  margin-top: 50px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <center>
+    <form action="/submit" method="post">
+      <h1>Bio-Data Form</h1>
+
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+
+      <label for="phone">Phone:</label>
+      <input type="number" id="phone" name="phone" required>
+
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+
+      <label for="education">Education:</label>
+      <input type="text" id="education" name="education" required>
+
+      <label for="experience">Experience:</label>
+      <input type="text" id="experience" name="experience" required>
+
+      <input type="submit" value="Submit Bio-Data">
+    </form>
+  </center>
+</body>
+
+</html>

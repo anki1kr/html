@@ -1,0 +1,137 @@
+/* -------------------------------
+sound bar and navbar in same row
+--------------------------------*/
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #222;
+  position: relative;
+}
+
+.visualizer {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 3px;
+  height: 8px;
+  background: white;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { height: 8px; }
+  50% { height: 40px; }
+}
+
+/*---------------
+navbar
+-----------------*/  
+
+.outline-svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rect-svg {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s;
+  stroke: #fff;
+}
+
+.navigation-bar {
+  position: relative;
+  width: 400px;
+  height: 60px;
+}
+
+.nav-container:hover .outline-svg .rect-svg {
+  transition: 999999s;
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+  background: #bef6;
+}
+
+.nav-button {
+  padding: 0.5em 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.nav-button:hover {
+  background: #fff3;
+}
+
+.nav-button:nth-child(1):hover ~ svg .rect-svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 2 8 73.3 8 10.7;
+}
+
+.nav-button:nth-child(2):hover ~ svg .rect-svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+}
+
+.nav-button:nth-child(3):hover ~ svg .rect-svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+}
+
+.nav-button:nth-child(4):hover ~ svg .rect-svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+}
+
+.nav-button:hover ~ .outline-svg .rect-svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}
+
+/* ---------------------
+Footer 
+--------------------------*/
+footer {
+  background-color: #2c3e5054;
+  width: 100%;
+  margin-top: 70px; /* Keep margin to separate from content above */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 80px; /* Decreased size of logo */
+  margin-right: 14px;
+}
+
+.footer-brand span {
+  color: #f39c12;
+  font-size: 1.2em;
+}
+
+.footer-brand span:hover {
+  color: #ecf0f1;
+}
