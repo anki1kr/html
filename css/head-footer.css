@@ -13,9 +13,10 @@ sound bar and navbar in same row
   display: flex;
   gap: 5px;
   padding: 10px;
-  background-color: #222;
+  background-color: #22222237;
   border-radius: 5px;
   cursor: pointer;
+  align-items: center;
 }
 
 .bar {

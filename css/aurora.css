@@ -1,8 +1,8 @@
 
  :root {
      --bg: #000000;
-     --clr-1: #00c2ff;
-     --clr-2: #33ff8c;
+     /* --clr-1: #00c2ff;
+     --clr-2: #33ff8c; */
      --clr-3: #ffc640;
      --clr-4: #e54cff;
      --blur: 1rem;
@@ -15,7 +15,7 @@
      min-height: 100vh;
      display: grid;
      place-items: center;
-     background-color: var(--bg);
+     /* background-color: var(--bg); */
      color: #ffffff;
      font-family: "Inter", "DM Sans", Arial, sans-serif;
   
