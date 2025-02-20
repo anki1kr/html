@@ -8,7 +8,6 @@ sound bar and navbar in same row
   background-color: #222;
   position: relative;
 }
-
 .visualizer {
   display: flex;
   gap: 5px;
@@ -23,6 +22,9 @@ sound bar and navbar in same row
   width: 3px;
   height: 8px;
   background: white;
+}
+
+.visualizer:hover .bar {
   animation: bounce 1s infinite ease-in-out;
 }
 
