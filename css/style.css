@@ -17,9 +17,7 @@ video.background-video {
     z-index: -2;
     opacity: 0.9;
     pointer-events: none;
-    background: url('file:///programs/stuffs/red_eye.mp4') no-repeat center center/cover;
-  
-   
+
 }
 
 
