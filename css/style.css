@@ -120,6 +120,13 @@ a:hover {
     grid-column: span 1; /* Each card takes one column */
 }
 
+.cards-grid > :nth-child(5),
+.cards-grid > :nth-child(6) {
+    grid-column: span 1; /* Each card takes one column */
+}
+
+
+
 @media (max-width: 600px) {
     .cards-grid {
         grid-template-columns: 1fr; /* Stack cards vertically on small screens */

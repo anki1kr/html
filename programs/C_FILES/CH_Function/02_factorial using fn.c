@@ -21,7 +21,7 @@ int main()
 
     return 0;
 }
-
+ 
 // function to calculate factorial
 int fact(int n) // FUNCTION DEFINATION
 {
