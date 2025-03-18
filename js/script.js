@@ -7,7 +7,7 @@ document.addEventListener("copy", (e) => {
 //loader 
 setTimeout(function () {
     document.getElementById('loader').style.display = 'none';
-}, 8000);
+}, 11000);
 
 
 //--------------------------------

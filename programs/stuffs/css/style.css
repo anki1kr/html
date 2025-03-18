@@ -58,7 +58,7 @@ body {
 }
 
 .flower--1 {
-  animation: moving-flower-1 4s linear infinite;
+  animation: moving-flower-1 7s linear infinite;
 }
 
 .flower--1 .flower__line {
@@ -93,7 +93,7 @@ body {
 .flower--2 {
   left: 50%;
   transform: rotate(20deg);
-  animation: moving-flower-2 4s linear infinite;
+  animation: moving-flower-2 7s linear infinite;
 }
 
 .flower--2 .flower__line {
@@ -120,7 +120,7 @@ body {
 .flower--3 {
   left: 50%;
   transform: rotate(-15deg);
-  animation: moving-flower-3 4s linear infinite;
+  animation: moving-flower-3 7s linear infinite;
 }
 
 .flower--3 .flower__line {
@@ -364,7 +364,7 @@ body {
 }
 
 .flower__grass--1 {
-  animation: moving-grass 2s linear infinite;
+  animation: moving-grass 7s linear infinite;
 }
 
 .flower__grass--2 {
@@ -373,7 +373,7 @@ body {
   transform: scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg);
   opacity: 0.8;
   z-index: 0;
-  animation: moving-grass--2 1.5s linear infinite;
+  animation: moving-grass--2 7s linear infinite;
 }
 
 .flower__grass--top {
@@ -546,7 +546,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  animation: flower-g-long-ans 3s linear infinite;
+  animation: flower-g-long-ans 7s linear infinite;
 }
 
 @keyframes flower-g-long-ans {
@@ -598,13 +598,13 @@ body {
 }
 
 .flower__g-right--1 {
-  animation: flower-g-right-ans 2.5s linear infinite;
+  animation: flower-g-right-ans 7s linear infinite;
 }
 
 .flower__g-right--2 {
   left: 5vmin;
   transform: rotateY(-180deg);
-  animation: flower-g-right-ans--2 3s linear infinite;
+  animation: flower-g-right-ans--2 7s linear infinite;
 }
 
 .flower__g-right--2 .leaf {
@@ -644,7 +644,7 @@ body {
   z-index: 100;
   transform-origin: bottom center;
   transform: rotate(-28deg) rotateY(30deg) scale(1.04);
-  animation: flower__g-front-ans 2s linear infinite;
+  animation: flower__g-front-ans 7s linear infinite;
 }
 
 @keyframes flower__g-front-ans {
@@ -775,7 +775,7 @@ body {
   left: vmin;
   transform-origin: bottom left;
   z-index: 10;
-  animation: flower__g-fr-ans 2s linear infinite;
+  animation: flower__g-fr-ans 7s linear infinite;
 }
 
 @keyframes flower__g-fr-ans {
@@ -1007,13 +1007,13 @@ body {
 
 .long-g .leaf--0 {
   left: 2vmin;
-  animation: leaf-ans-1 4s linear infinite;
+  animation: leaf-ans-1 7s linear infinite;
 }
 
 .long-g .leaf--1 {
   --w: 5vmin;
   --h: 60vmin;
-  animation: leaf-ans-1 4s linear infinite;
+  animation: leaf-ans-1 7s linear infinite;
 }
 
 .long-g .leaf--2 {
@@ -1023,7 +1023,7 @@ body {
   bottom: 5vmin;
   transform-origin: bottom left;
   transform: rotateY(-180deg);
-  animation: leaf-ans-2 3s linear infinite;
+  animation: leaf-ans-2 7s linear infinite;
 }
 
 .long-g .leaf--3 {
@@ -1033,7 +1033,7 @@ body {
   bottom: 3.2vmin;
   transform-origin: bottom left;
   transform: rotate(-10deg) rotateY(-180deg);
-  animation: leaf-ans-3 3s linear infinite;
+  animation: leaf-ans-3 7s linear infinite;
 }
 
 @keyframes leaf-ans-1 {
