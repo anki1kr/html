@@ -12,19 +12,39 @@
       const topBtn = document.getElementById('top-btn');
       
       let pdfDoc = null;
-      let scale = 1.5;
+      let scale = getInitialScale(); // Use responsive initial scale
       let rendering = false;
       
       // Get device pixel ratio for higher resolution rendering
       const pixelRatio = window.devicePixelRatio || 1;
+      
+      // Function to determine initial scale based on screen width
+      function getInitialScale() {
+        const width = window.innerWidth;
+        if (width <= 576) return 1.0;
+        if (width <= 768) return 1.2;
+        if (width <= 992) return 1.3;
+        return 1.5; // Default for larger screens
+      }
       
       // Function to update zoom level display
       function updateZoomLevel() {
         zoomLevel.textContent = `${Math.round(scale * 100)}%`;
       }
       
+      // Function to calculate optimal scale for container width
+      function getOptimalScale(page) {
+        const viewport = page.getViewport({ scale: 1 });
+        const containerWidth = container.clientWidth;
+        // Use 90% of container width to give some margin
+        const optimalScale = (containerWidth * 0.9) / viewport.width;
+        
+        // Limit the scale to reasonable bounds
+        return Math.min(Math.max(optimalScale, 0.5), 2.5);
+      }
+      
       // Function to render all pages of the PDF
-      async function renderPDF() {
+      async function renderPDF(useOptimalScale = false) {
         if (rendering) return;
         rendering = true;
         
@@ -35,6 +55,14 @@
         container.innerHTML = '';
         
         try {
+          // Determine if we need to adjust scale for first page
+          if (useOptimalScale && pdfDoc.numPages > 0) {
+            const firstPage = await pdfDoc.getPage(1);
+            const newScale = getOptimalScale(firstPage);
+            scale = newScale;
+            updateZoomLevel();
+          }
+          
           // Loop through each page and render it
           for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
             const page = await pdfDoc.getPage(pageNum);
@@ -106,7 +134,7 @@
           });
           
           pdfDoc = await loadingTask.promise;
-          await renderPDF();
+          await renderPDF(true); // Use optimal scale for initial render
         } catch (error) {
           console.error('Error loading PDF:', error);
           loadingIndicator.textContent = 'Failed to load PDF document.';
@@ -129,14 +157,13 @@
       });
       
       topBtn.addEventListener('click', () => {
+        // Scroll PDF container to top
         container.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Add event listener for Back to Top button
-      topBtn.addEventListener('click', () => {
+        
+        // Also scroll page to the top if needed
         window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+          top: 0,
+          behavior: 'smooth'
         });
       });
       
@@ -170,8 +197,8 @@
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-          if (pdfDoc) renderPDF();
-        }, 200);
+          if (pdfDoc) renderPDF(true); // Use optimal scale on resize
+        }, 300);
       });
       
       // Prevent common methods for downloading
