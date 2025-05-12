@@ -19,3 +19,7 @@ onload = () => {
     clearTimeout(c);
   }, 1000);
 };
+
+window.addEventListener('load', function () {
+  document.getElementById('preloader').style.display = 'none';
+});
