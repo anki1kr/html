@@ -7,6 +7,7 @@ vote = ("yes", "no") [age <= 18]
 print(vote)
 
 #cleaver ternary operator 2
+'''
 sal = float (input("salary : "))
 tax = sal*(0.1, 0.2) [sal <= 50000]
-print(tax)
+print(tax)'''

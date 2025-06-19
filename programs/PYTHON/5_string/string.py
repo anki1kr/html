@@ -1,3 +1,4 @@
+
 # str.len() function
 '''len() function is an inbuilt function in python programming language that returns the length of the string.
  syntax: len(string)'''
@@ -19,8 +20,8 @@ print("the repetation of ",str.count("$"))
 syntax: str.find(substring, start, end)'''
 
 str="this is $ symbol"
-#            87654321
-#           -8-7-6-5-4-3-2-1 negative indexing is used 
+#            8  7  6  5  4  3  2  1
+#           -8 -7 -6 -5 -4 -3 -2 -1 negative indexing is used 
 print(str.find("$"))
 
 
@@ -43,3 +44,4 @@ syntax: str.replace(old, new, count)'''
 str = "i am Studying Python from College"
 str =str.replace("Python","Java")
 print(str)
+
