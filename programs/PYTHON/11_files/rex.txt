@@ -1,0 +1,3 @@
+Hi I am Rex a python programmer , Nice to meet ya !
+I am learning how to read and write files in python.
+This is added through append.I work in AI and ML
