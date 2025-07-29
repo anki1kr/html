@@ -1,6 +1,8 @@
-f = open("rex.txt","r")
 
-for line in f:
-    print(line)
+with open("rex.txt", "r") as f:
+    for line in f:
+        print(line)
 
-f.close()
+        
+    # data =f.readlines()  # Read all lines into a list
+    # print(data)  # Print the list of lines
