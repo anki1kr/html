@@ -20,7 +20,7 @@ int main()
         i += 2;
     }
     cout << endl
-         << "=" << sum <<endl;
+         << "=" << sum << endl;
 
     return 0;
 }

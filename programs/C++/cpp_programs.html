@@ -2,62 +2,599 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Programs</title>
-    <link rel="stylesheet" href="https://anki1kr.github.io/html/css/aurora.css">
-    <link rel="stylesheet" href="https://anki1kr.github.io/html/css/style.css">
-     <link rel="stylesheet" href="../stuffs/css/pyramid.css">
-    <link rel="stylesheet" href="https://anki1kr.github.io/html/css/head-footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="E8CUPQxWuwCIbGV-Mh7IqsIqLnuc_496z6ymjnzd_OI" />
+  <title>C++ Programs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../stuffs/css/pyramid.css">
+  <link rel="stylesheet" href="../../css/pdf.css">
+  <link rel="stylesheet" href="../../css/pf-main-content.css">
+  <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
-<body style="font-family: 'Macondo', serif;">
-      <div id="preloader">
-    <div class="pyramid-loader">
-      <div class="wrapper">
-        <span class="side side1"></span>
-        <span class="side side2"></span>
-        <span class="side side3"></span>
-        <span class="side side4"></span>
-        <span class="shadow"></span>
+<body class="pf-body" style=" font-family: Macondo, serif;">
+
+
+  <header>
+
+    <div id="pre-loader">
+      <div class="pyramid-loader">
+        <div class="wrapper">
+          <span class="side side1"></span>
+          <span class="side side2"></span>
+          <span class="side side3"></span>
+          <span class="side side4"></span>
+          <span class="shadow"></span>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="main-content">
-    <section>
-        <video class="background-video" autoplay muted loop>
-            <source src="../../programs/stuffs/red_eye.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </section>
-    <div class="container">
-        <div class="content">
-            <h1 class="title">C++ Programs
-                <div class="aurora">
-                    <div class="aurora__item"></div>
-                    <div class="aurora__item"></div>
-                    <div class="aurora__item"></div>
-                    <div class="aurora__item"></div>
-                </div>
-            </h1>
-        </div>
-        <p>Explore the list of my C++ programs below:</p>
 
-        <div class="program-list">
-            <h2>C++ Programs</h2>
-            <ul>
-                <li><a href="arithamatic.cpp" target="_blank">Arithmetic Operations</a></li>
-                <li><a href="sum_of_even.odd.cpp" target="_blank">Sum of Even/Odd</a></li>
-                <li><a href="SUM_UPTO_N.cpp" target="_blank">Sum Upto N Terms</a></li>
-            </ul>
-        </div>
+    <script>
+      // Show loader until #redeye and .pdf-viewer-wrapper are loaded and #redeye is ready
+      (function waitForContent(min = 1200) {
+        const start = Date.now();
+        function done() {
+          const l = document.getElementById('pre-loader');
+          if (l) {
+            l.style.transition = 'opacity 1s';
+            l.style.opacity = 0;
+            setTimeout(() => l.style.display = 'none', 1000);
+          }
+        }
+        function check() {
+          const w = document.querySelector('.pdf-viewer-wrapper,.pf-background-video');
+          // Check if element exists and is ready
+          if (w && typeof w.readyState !== "undefined" && w.readyState >= 3 && (Date.now() - start) >= min) {
+            done();
+          } else {
+            setTimeout(check, 100);
+          }
+        }
+        document.addEventListener('DOMContentLoaded', check);
+      })();
+    </script>
+    <nav class="navbar">
+      <div class="logo">LYROX</div>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="https://rex7.netlify.app">Home</a>
+        <a href="https://rex7.netlify.app#game">About</a>
+        <a href="https://rex7.netlify.app#pf-main-content">Project-Files</a>
+        <a href="https://rex7.netlify.app#footer">Contact</a>
+        <a href="https://rex7.netlify.app#footer">Github</a>
+      </div>
+      <button class="waitlist-btn">JOIN THE WAITLIST</button>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="pf-main-content" class="pf-main-content">
+    <section>
+      <video class="pf-background-video" autoplay muted loop>
+        <source src="../stuffs/red_eye.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <div class="pf-aurora-body">
+      <div class="pf-aurora-content">
+        <h1 class="pf-title1">C++ Programs
+          <div class="pf-aurora">
+            <div class="pf-aurora__item"></div>
+            <div class="pf-aurora__item"></div>
+            <div class="pf-aurora__item"></div>
+            <div class="pf-aurora__item"></div>
+          </div>
+        </h1>
+      </div>
     </div>
-</div>
-    <footer>
-        <p>Created by REX <a href="example.com">Contact Me</a></p>
-    </footer>
-    <script src="https://anki1kr.github.io/html/js/script.js"></script>
-         <script src="../stuffs/js/main.js"></script>
+    <centre>
+      <p>Explore the list of my C++ programs below:</p>
+    </centre>
+    <div class="pf-program-list">
+      <h3>Conditional Statement</h3>
+      <ul>
+        <li>
+          <h2>Basic Arithamatic Operators</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int a, b;
+    cout &lt;&lt; "enter any number=";
+    cin &gt;&gt; a;
+    cout &lt;&lt; "enter any number=";
+    cin &gt;&gt; b;
+    cout &lt;&lt; "\nsum of two number="     &lt;&lt; a + b &lt;&lt; endl;
+    cout &lt;&lt; "diff of two number="    &lt;&lt; a - b &lt;&lt; endl;
+    cout &lt;&lt; "division of two number="&lt;&lt; a / b &lt;&lt; endl;
+    cout &lt;&lt; "product of two number=" &lt;&lt; a * b &lt;&lt; endl;
+    cout &lt;&lt; "modulo of two number="  &lt;&lt; a % b &lt;&lt; endl;
+  }</code></pre>
+          </div>
+
+        </li>
+
+        <li>
+          <h2>Sum of Even/Odd</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    int n, c;
+    cout &lt;&lt; "Choose\n1.for Even\n2.for Odd\n Enter(1/2): ";
+    cin &gt;&gt; c;
+    cout &lt;&lt; "Sum upto ? terms: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Sum is = " &lt;&lt; (c==1 ? n*(n+1) : n*n) &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          </div>
+        </li>
+      </ul>
+      <h3>Loops</h3>
+      <ul>
+        <li>
+          <h2>A-Z Character Pattern Print</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    char ch = 'A';
+    cout &lt;&lt; "enter the no. of rows :";
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = 0; j &lt; n; j++)
+        {
+            cout &lt;&lt; ch &lt;&lt; " ";
+            ch++;
+        }
+        cout &lt;&lt; endl;
+    }
+    cout &lt;&lt; "end value of ch is =" &lt;&lt; ch;
+    return 0;
+}</code></pre>
+          </div>
+        </li>
+        <li>
+          <h2>Star Matrix</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n;
+    cout &lt;&lt; "enter n= ";
+    cin &gt;&gt; n;
+
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int k = 0; k &lt; n - i - 1; k++)
+            cout &lt;&lt; " ";
+
+        for (int j = 0; j &lt; i + 1; j++)
+            cout &lt;&lt; "*";
+
+        for (int j = 1; j &lt;= i; j++)
+            cout &lt;&lt; "*";
+
+        cout &lt;&lt; endl;
+    }
+
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int k = 0; k &lt; i + 1; k++)
+            cout &lt;&lt; " ";
+
+        for (int j = 1; j &lt;= n - i - 1; j++)
+            cout &lt;&lt; "*";
+
+        for (int j = 1; j &lt; n - i - 1; j++)
+            cout &lt;&lt; "*";
+
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Reverse Triangle</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n;
+    cout &lt;&lt; "enter the no. of rows :";
+    cin &gt;&gt; n;
+
+    char ch = 'A';
+
+    for (int i = 0; i &lt; n; i++)
+    {
+        for (int j = 1; j &lt; i + 1; j++)
+            cout &lt;&lt; " ";
+
+        for (int j = 0; j &lt; n - i; j++)
+            cout &lt;&lt; ch;
+
+        cout &lt;&lt; endl;
+
+        ch++;
+    }
+
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Pyramid Pattern</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    int n=4;
+    for(int i=0;i&lt;n;i++){
+        // spaces
+        for(int k=0;k&lt;n-i-1;k++){
+            cout&lt;&lt;" ";
+        }
+        // 1st triangle
+        for(int j=1;j&lt;i+1;j++){
+            cout&lt;&lt;j;
+        }
+        // 2nd triangle
+        for(int j=i+1;j&gt;0;j--){
+            cout&lt;&lt;j;
+        }
+        cout&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+
+        <li>
+          <h2>Diamond Pattern</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n = 9;
+
+    // top part
+    for (int i = 0; i &lt; n; i++)
+    {
+        // left side spaces
+        for (int k = 0; k &lt; n - i - 1; k++)
+            cout &lt;&lt; " ";
+
+        cout &lt;&lt; "*";
+
+        if (i != 0)
+            // spaces in middle
+            for (int j = 0; j &lt; 2 * i - 1; j++)
+                cout &lt;&lt; " ";
+
+        cout &lt;&lt; "*";
+
+        cout &lt;&lt; endl;
+    }
+
+    // bottom part
+    for (int i = 0; i &lt; n - 1; i++)
+    {
+        // left side spaces
+        for (int k = 0; k &lt; i + 1; k++)
+        {
+            cout &lt;&lt; " ";
+        }
+
+        cout &lt;&lt; "*";
+
+        if (i != n - 2)
+            // spaces in middle
+            for (int j = 0; j &lt; 2 * (n - i - 2) - 1; j++)
+                cout &lt;&lt; " ";
+
+        cout &lt;&lt; "*";
+
+        cout &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+      </ul>
+      <h3>Function</h3>
+      <ul>
+        <li>
+          <h2>Factorial</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int fact(int n) {
+    if (n == 0 or n == 1) return 1;
+    else return n * fact(n - 1);
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Factorial of " &lt;&lt; n &lt;&lt; " is " &lt;&lt; fact(n) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Sum Of Digits</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int sumOfDigit(int n) {
+    int sum_of_digit = 0;
+    while (n &gt; 0) {
+        int last_digit = n % 10;
+        n /= 10;
+        sum_of_digit += last_digit;
+    }
+    return sum_of_digit;
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Sum of digits is: " &lt;&lt; sumOfDigit(n) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>nCr (Binomial Coefficient)</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int fact(int n) {
+    if (n == 0 or n == 1) return 1;
+    else return n * fact(n - 1);
+}
+
+int nCr(int n, int r) {
+    int nmr = n - r;
+    return fact(n) / (fact(r) * fact(nmr));
+}
+
+int main() {
+    int n, r;
+    cout &lt;&lt; "Enter n: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "Enter r: ";
+    cin &gt;&gt; r;
+    cout &lt;&lt; "---Factorial of--- " &lt;&lt; nCr(n, r) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Prime Check</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+bool isPrime(int n) {
+    for (int i = 2; i * i &lt;= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return n &gt; 1;
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+    for (int i = 2; i &lt;= n; i++) {
+        if (isPrime(i)) cout &lt;&lt; i &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Fibonacci</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int fib(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "---Fibonacci Series---" &lt;&lt; endl;
+    for (int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; fib(i) &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <h2>Reverse of Number</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int reverse(int n) {
+    int rev = 0;
+    while (n &gt; 0) {
+        int lastDigit = n % 10;
+        rev = rev * 10 + lastDigit;
+        n /= 10;
+    }
+    return rev;
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; n;
+    cout &lt;&lt; "\nReverse of " &lt;&lt; n &lt;&lt; " is " &lt;&lt; reverse(n) &lt;&lt; "\n\n";
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+
+      </ul>
+      <h3>OOPS</h3>
+      <ul>
+        <li>
+          <h2>Prime Numbers Using Class Inheritance</h2>
+          <div class="code-container">
+            <button class="copy-btn" onclick="fallbackCopy(this)">Copy</button>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class A
+{
+public:
+    bool isPrime(int n)
+    {
+        for (int i = 2; i * i &lt;= n; i++)
+        {
+            if (n % i == 0)
+                return false;
+        }
+        return n &gt; 1;
+    }
+};
+
+class B : public A
+{
+protected: // Changed to protected so child class can access it
+    int num;
+
+public:
+    void getData()
+    {
+        cout &lt;&lt; "Enter a number: ";
+        cin &gt;&gt; num;
+    }
+    void PrintData()
+    {
+        for (int i = 2; i &lt;= num; i++) // Used the 'num' variable from the parent class
+        {
+            if (isPrime(i)) // Check if the number is prime
+            {
+                cout &lt;&lt; i &lt;&lt; " ";
+            }
+        }
+    }
+};
+
+int main()
+{
+    B p;
+    p.getData();
+    p.PrintData();
+    return 0;
+}
+</code></pre>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="section">
+    <div class="container">
+      <div class="footer-logo">LOGICNEST</div>
+
+      <div class="footer-links">
+        <a href="https://rex7.netlify.app">Home</a>
+        <a href="https://rex7.netlify.app#game">About</a>
+        <a href="https://rex7.netlify.app#pf-main-content">Project-Files</a>
+        <a href="https://rex7.netlify.app#footer">Contact</a>
+        <a href="https://rex7.netlify.app#footer">Github</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
+        <a href="https://twitch.com/"><i class="fab fa-twitch"></i></a>
+        <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">© 2025 LOGICNEST. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../../js/index.js"></script>
+  <script src="../../js/script.js"></script>
+
 </body>
 
 </html>
