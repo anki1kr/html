@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project_files</title>
+    <title>C++ FILE</title>
     <link rel="stylesheet" href="https://anki1kr.github.io/html/css/aurora.css">
     <link rel="stylesheet" href="https://anki1kr.github.io/html/css/style.css">
     <link rel="stylesheet" href="https://anki1kr.github.io/html/css/head-footer.css">
+    <link rel="stylesheet" href="https://anki1kr.github.io/html/css/pdf.css">
+    
     <link rel="stylesheet" href="../stuffs/css/pyramid.css">
+
 </head>
 
 <body style="font-family: 'Macondo', serif;">
@@ -24,15 +27,15 @@
         </div>
     </div>
     <div id="main-content">
-        <section>
+        <div>
             <video class="background-video" autoplay muted loop>
                 <source src="../../programs/stuffs/red_eye.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </section>
+        </div>
         <div class="container">
             <div class="content">
-                <h1 class="title">PROJECT FILES
+                <h1 class="title">C++ Programs
                     <div class="aurora">
                         <div class="aurora__item"></div>
                         <div class="aurora__item"></div>
@@ -40,36 +43,43 @@
                         <div class="aurora__item"></div>
                     </div>
                 </h1>
+                <p>Explore the list of my C++ programs </p>
             </div>
-            <p>Explore the list of my LAB EXPERIMENT FILES below:</p>
 
-            <div class="program-list">
-                <h2>Practical file of all Semesters</h2>
-                <h3>SEM 1</h3>
-                <ul>
-                    <li><a href="../pf/vac1.html">V.A.C- HTML,CSS,JS file</a></li>
-
-                </ul>
-                <h3>SEM 2</h3>
-                <ul>
-                    <li><a href="../pf/os.html">Operating System File</a></li>
-                    <li><a href="../pf/cn.html">Computer Networking File</a></li>
-                    <li><a href="../pf/c.html">V.A.C- C fILE </a></li>
-                </ul>
-                <h3>SEM 3</h3>
-                <ul>
-                    <li><a href="../pf/c++.html">Oops in C++ File</a></li>
-                    <li><a href="../pf/iwt.html">Iwt File</a></li>
-                    <li><a href=""> </a></li>
-                </ul>
+            <div class="pdf-viewer-wrapper">
+                <div id="pdf-viewer">
+                    <div id="pdf-container"></div>
+                    <div id="pdf-controls">
+                        <button id="top-btn">Back to Top</button>
+                        <div id="zoom-controls">
+                            <button class="zoom-btn" id="zoom-out">-</button>
+                            <span id="zoom-level">150%</span>
+                            <button class="zoom-btn" id="zoom-in">+</button>
+                        </div>
+                        <button id="fullscreen-btn">⛶ Fullscreen</button>
+                    </div>
+                    <div id="loading-indicator">Loading PDF...</div>
+                </div>
             </div>
+
+
         </div>
     </div>
     <footer>
-        <p>Created by REX <a href="example.com">Contact Me</a></p>
+        <p>Created by REX | <a href="example.com">Contact Me</a></p>
     </footer>
     <script src="https://anki1kr.github.io/html/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://anki1kr.github.io/html/js/pdf-view.js"></script>
     <script src="../stuffs/js/main.js"></script>
+
+    <script>
+        window.pdfViewerOptions = {
+            pdfUrl: 'https://anki1kr.github.io/html/programs/pf/c++.pdf'
+        };
+    </script>
+
+   
 </body>
 
 </html>

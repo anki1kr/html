@@ -115,7 +115,7 @@
     background: #2b6cd4;
 }
 
-#top-btn {
+#top-btn, #fullscreen-btn {
     padding: 8px 16px;
     border: none;
     background: #4285f4;
@@ -126,7 +126,7 @@
     transition: background 0.2s;
 }
 
-#top-btn:hover {
+#top-btn:hover ,#fullscreen-btn:hover {
     background: #2b6cd4;
 }
 

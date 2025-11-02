@@ -278,3 +278,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const pdfViewer = document.getElementById('pdf-viewer');
+
+            if (fullscreenBtn && pdfViewer) {
+                fullscreenBtn.addEventListener('click', function() {
+                    if (!document.fullscreenElement) {
+                        // Enter fullscreen
+                        if (pdfViewer.requestFullscreen) {
+                            pdfViewer.requestFullscreen();
+                        } else if (pdfViewer.mozRequestFullScreen) {
+                            pdfViewer.mozRequestFullScreen();
+                        } else if (pdfViewer.webkitRequestFullscreen) {
+                            pdfViewer.webkitRequestFullscreen();
+                        } else if (pdfViewer.msRequestFullscreen) {
+                            pdfViewer.msRequestFullscreen();
+                        }
+                        fullscreenBtn.textContent = '⛶ Exit Fullscreen';
+                    } else {
+                        // Exit fullscreen
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.mozCancelFullScreen) {
+                            document.mozCancelFullScreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                        fullscreenBtn.textContent = '⛶ Fullscreen';
+                    }
+                });
+
+                // Listen for fullscreen changes to update button text
+                document.addEventListener('fullscreenchange', function() {
+                    if (!document.fullscreenElement) {
+                        fullscreenBtn.textContent = '⛶ Fullscreen';
+                    }
+                });
+                document.addEventListener('webkitfullscreenchange', function() {
+                    if (!document.webkitFullscreenElement) {
+                        fullscreenBtn.textContent = '⛶ Fullscreen';
+                    }
+                });
+                document.addEventListener('mozfullscreenchange', function() {
+                    if (!document.mozFullScreenElement) {
+                        fullscreenBtn.textContent = '⛶ Fullscreen';
+                    }
+                });
+            }
+        });
